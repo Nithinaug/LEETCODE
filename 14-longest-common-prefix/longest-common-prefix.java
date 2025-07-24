@@ -3,16 +3,16 @@ class Solution {
         if (strs == null || strs.length == 0) return "";
         
         String a = strs[0];
-        int alen = a.length();
+        int b = a.length();
 
         for (int i = 1; i < strs.length; i++) {
             String s = strs[i];
-            while (alen > s.length() || !a.equals(s.substring(0, alen))) {
-                alen--;
-                if (alen == 0) {
+            while (b> s.length() || !a.equals(s.substring(0, b))) {
+                b--;
+                if (b == 0) {
                     return "";
                 }
-                a = a.substring(0, alen);
+                a = a.substring(0, b);
             }
         }
 
